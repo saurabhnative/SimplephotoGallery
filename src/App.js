@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Upload from './components/upload/upload';
 import Wardrobe from './components/wardrobe/wardrobe';
+import DaysGarments from './components/daysGarments/daysGarments.js';
 import { Layout, Menu } from 'antd';
 const { Header, Content } = Layout;
 class App extends Component {
@@ -34,10 +35,17 @@ class App extends Component {
           <Upload />
         </React.Fragment>
       )
-    }else{
+    }else if(item.key === "wardrobe"){
       content.push(
         <React.Fragment key='content'>
           <Wardrobe />
+        </React.Fragment>
+      )
+    }
+    else {
+      content.push(
+        <React.Fragment key='content'>
+          <DaysGarments />
         </React.Fragment>
       )
     }
@@ -58,6 +66,7 @@ class App extends Component {
          >
            <Menu.Item key="upload">Upload Images</Menu.Item>
            <Menu.Item key="wardrobe">Wardrobe</Menu.Item>
+           <Menu.Item key="daysGarments">DaysGarments</Menu.Item>
          </Menu>
        </Header>
        <Content className="content">

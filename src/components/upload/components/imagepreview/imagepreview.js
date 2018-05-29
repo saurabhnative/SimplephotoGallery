@@ -24,7 +24,7 @@ class ImagePreview extends Component {
       <React.Fragment>
       <p>{this.props.file.name}</p>
       <img className="img-upload" alt={this.props.file.name} src={window.URL.createObjectURL(this.props.file)}/>
-      <div>
+      <div className="select-garment-container">
           <Select
           name="form-field-name"
           value={this.state.selectedOption}

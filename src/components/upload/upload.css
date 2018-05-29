@@ -13,14 +13,17 @@
 }
 
 .img-container{
-  display: grid;
-  grid-template-columns: 400px 400px 400px 400px;
-  padding: 10px;
-  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .uploaded-img-container{
-  padding: 40px;
+  display: grid;
+  grid-template-columns: 400px 400px 400px 400px;
+  padding: 10px;
   margin: 10px;
 }
 
@@ -31,4 +34,8 @@
 
 .select-text{
   font-size: 18px
+}
+
+.select-garment-container{
+  width: 300px;
 }

@@ -28,7 +28,7 @@ class Upload extends Component {
             localStorage.setItem('filesUploaded',this.state.files+1)
             let imgArray=this.state.imgArray
             imgArray.push(
-              <div className="uploaded-img-container" key={file.name+index}>
+              <div className="img-container" key={file.name+index}>
                 <ImagePreview file={file} index={this.state.files}/>
               </div>
             )
@@ -54,7 +54,7 @@ class Upload extends Component {
             </p>
           </Dropzone>
         </div>
-        <div className="img-container">
+        <div className="uploaded-img-container">
           {this.state.imgArray}
         </div>
       </section>
